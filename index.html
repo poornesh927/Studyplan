@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Plan Generator</title>
+    <style>
+      body{
+          background-image: url('ba.jpeg');
+          background-position: 100%;
+           background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .left-side,.right-side{
+            background-image: url('w.jpeg');
+            background-position: 100%;
+           background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .right-side{
+            background-image: url('w.jpeg');
+            background-position: 100%;
+           background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #congratulationsSection{
+            color:whitesmoke;
+        }
+        </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: darkgreen;">B Study Planner</h1>
+    <div class="container">
+        <!-- Left Side: Task Input -->
+        <div class="left-side">
+            <h1>Add Your Tasks</h1>
+            <div id="taskInputSection">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" placeholder="Enter task name">
+                
+                <label for="taskPriority">Task Priority:</label>
+                <select id="taskPriority">
+                    <option value="urgent">Urgent</option>
+                    <option value="important">Important</option>
+                    <option value="unnecessary">Unnecessary</option>
+                </select>
+                
+                <label for="taskHours">Time Required:</label>
+                <div class="time-inputs">
+                    <input type="number" id="taskHours" placeholder="Hours" min="0">
+                    <input type="number" id="taskMinutes" placeholder="Minutes" min="0" max="59">
+                    <input type="number" id="taskSeconds" placeholder="Seconds" min="0" max="59">
+                </div>
+
+                <button onclick="addTask()">Save Task</button>
+            </div>
+        </div>
+        
+        <!-- Right Side: Saved Tasks and Study Plan -->
+        <div class="right-side">
+            <h1 style="color:aliceblue">Saved Tasks</h1>
+            <ul id="savedTasks"></ul>
+            
+            <div id="studyPlanButtonSection" style="display: none;">
+                <button onclick="showStudyPlan()">Show Study Plan</button>
+            </div>
+            
+            <div id="studyPlanSection" style="display: none;">
+                <h2>Your Study Plan</h2>
+                <ul id="studyPlan"></ul>
+                <button onclick="startStudy()">Start Study</button>
+            </div>
+
+            <div id="timerSection" style="display: none;">
+                <h2>Task Timer</h2>
+                <p id="currentTask"></p>
+                <p>Time spent: <span id="timer">00:00:00</span></p>
+                <button onclick="completeTask()">Complete Task</button>
+            </div>
+
+            <div id="congratulationsSection" style="display: none;">
+                <h2>Congratulations!</h2>
+                <p id="totalTime"></p>
+                <button onclick="reset()">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left-side, .right-side {
+    width: 48%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.time-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-inputs input {
+    width: 30%;
+}
+
+#savedTasks, #studyPlan {
+    list-style-type: none;
+    padding: 0;
+}
+
+#savedTasks li, #studyPlan li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#congratulationsSection h2 {
+    color: #28a745;
+}
+
+.right-side h1 {
+    color: #007bff;
+}
